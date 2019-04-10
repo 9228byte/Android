@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="清选择你的婚姻状况"
+        android:textColor="#000000"
+        android:textSize="17sp"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rg_marry"
+        android:orientation="vertical">
+
+    <!--请通过button属性修改单选按钮的图标-->
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rb_unmarried"
+        android:padding="5dp"
+        android:button="@drawable/radio_selector"
+        android:text="未婚"
+        android:textColor="#000000"
+        android:textSize="17sp"/>
+
+    <!--通过drawableLeft属性修改单选按钮的图图片-->
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rb_married"
+        android:padding="5dp"
+        android:button="@null"
+        android:drawableLeft="@drawable/radio_selector"
+        android:drawablePadding="10dp"
+        android:text="已婚"
+        android:textColor="#000000"
+        android:textSize="17sp" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_marry"
+        android:textColor="#000000"
+        android:textSize="17sp"/>
+</LinearLayout>

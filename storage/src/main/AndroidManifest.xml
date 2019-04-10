@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.storage">
+    <!-- SD卡读写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- x联系人 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" /> <!-- 短信 -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" /> <!-- 通话记录 -->
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" /> <!-- 读取电话状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ShoppingChannelActivity"></activity>
+        <activity android:name=".ShoppingDetailActivity" />
+        <activity android:name=".ShoppingCartActivity" />
+        <activity android:name=".MenuContextActivity" />
+        <activity android:name=".MenuOptionActivity" />
+        <activity android:name=".ContentObserverActivity" />
+        <activity android:name=".ContentResolverActivity" />
+        <activity android:name=".ContentProviderActivity" />
+        <activity android:name=".AppReadActivity" />
+        <activity android:name=".ActNextActivity" />
+        <activity android:name=".ActJumpActivity" />
+        <activity android:name=".ImageReadActivity" />
+        <activity android:name=".ImageWriteActivity" />
+        <activity android:name=".TextReadActivity" />
+        <activity android:name=".TextWriteActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AppWriteActivity" />
+        <activity android:name=".ShareReadActivity" />
+        <activity android:name=".ShareWriteActivity" />
+        <activity android:name=".SQLiteWriteActivity" />
+        <activity android:name=".DatabaseActivity" />
+        <activity android:name=".LoginForgetActivity" />
+        <activity android:name=".LoginShareActivity" />
+        <activity android:name=".FilePathActivity" />
+        <activity android:name=".FileBasicActivity" />
+        <activity android:name=".LoginSQLiteActivity" />
+        <activity android:name=".SQLiteReadActivity" />
+
+        <provider
+            android:name=".provider.UserInfoProvider"
+            android:authorities="com.example.storage.provider.UserInfoProvider"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+
+</manifest>

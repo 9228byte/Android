@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:padding="10dp"
+    tools:context=".ImageReadActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_delete"
+        android:text="删除所有图片"
+        android:textColor="@color/black"
+        android:textSize="17sp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/tv_file"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="文件名："
+            android:textColor="@color/black"
+            android:textSize="17sp"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/sp_file"
+            android:layout_toRightOf="@+id/tv_file"
+            android:gravity="left|center"
+            android:spinnerMode="dialog"/>
+
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_image"
+        android:scaleType="fitCenter"/>
+
+</LinearLayout>

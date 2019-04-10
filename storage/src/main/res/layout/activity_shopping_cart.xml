@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffdd"
+    android:orientation="vertical"
+    tools:context=".ShoppingCartActivity">
+
+    <include layout="@layout/activity_shopping_title" />        <!--标题栏-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">       <!--滚动视图-->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">      <!--框架布局，边框距离5dp-->
+
+            <LinearLayout
+                android:id="@+id/ll_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">  <!--第一个线性布局，隐藏视图中的控件-->
+
+                <LinearLayout
+                    android:id="@+id/ll_cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">     <!--购物车线性视图-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">     <!--金额视图-->
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:text="总金额："
+                        android:textColor="@color/black"
+                        android:textSize="17sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_total_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center|right"
+                        android:textColor="@color/red"
+                        android:textSize="25sp" />
+
+                        <Button
+                            android:id="@+id/btn_settle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="结算"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"> <!--第二个线性垂直布局-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="100dp"
+                    android:layout_marginTop="100dp"
+                    android:gravity="center"
+                    android:text="哎呀，购物车空空如也，快去选购商品吧"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"/>
+
+                <Button
+                    android:id="@+id/btn_shopping_channel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="逛逛手机商场"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"/>
+            </LinearLayout>
+        </FrameLayout>
+    </ScrollView>
+
+</LinearLayout>

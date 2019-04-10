@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.senior">
+    <!-- 声明SD卡读写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".CalendarActivity"></activity>
+        <activity android:name=".MonthPickerActivity" />
+        <activity android:name=".AlarmActivity" />
+        <activity android:name=".BroadSystemActivity" />
+        <activity android:name=".BroadTempActivity" />
+        <activity android:name=".LaunchImproveActivity" />
+        <activity android:name=".FragmentDynamicActivity" />
+        <activity android:name=".FragmentStaticActivity" />
+        <activity android:name=".LaunchSimpleActivity" />
+        <activity android:name=".PagerTabStripActivity" />
+        <activity android:name=".PagerTitleStripActivity" />
+        <activity android:name=".ViewPagerActivity" />
+        <activity android:name=".GridViewActivity" />
+        <activity android:name=".ShoppingChannelActivity" />
+        <activity android:name=".ShoppingDetailActivity" />
+        <activity android:name=".ShoppingCartActivity" />
+        <activity android:name=".ListViewActivity" />
+        <activity android:name=".BaseAdapterActivity" />
+        <activity android:name=".TimePickerActivity" />
+        <activity android:name=".DatePickerActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".AlarmActivity$AlarmReceiver">
+            <intent-filter>
+                <action android:name="com.example.senior.AlarmActivity.AlarmReceiver" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

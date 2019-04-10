@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.middle">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".TextCheckActivity"></activity>
+        <activity android:name=".ActUriActivity" />
+        <activity android:name=".ActHomeActivity" />
+        <activity android:name=".EditCursorActivity" />
+        <activity android:name=".EditSimpleActivity" />
+        <activity android:name=".RelativeCodeActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AlertActivity" />
+        <activity android:name=".LoginForgetActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".MortgageActivity" />
+        <activity android:name=".ActResponseActivity" />
+        <activity android:name=".ActRequestActivity" />
+        <activity android:name=".ActRotateActivity" />
+        <activity android:name=".ActNextActivity" />
+        <activity android:name=".ActJumpActivity" />
+        <activity android:name=".EditAutoActivity" />
+        <activity android:name=".JumpTextActivity" />
+        <activity android:name=".EditHideActivity" />
+        <activity android:name=".EditBorderActivity" />
+        <activity android:name=".SpinnerDropdownActivity" />
+        <activity android:name=".SpinnerIconActivity" />
+        <activity android:name=".SpinnerDialogActivity" />
+        <activity android:name=".RadioHorizontalActivity" />
+        <activity android:name=".RadioVerticalActivity" />
+        <activity android:name=".SwitchIOSActivity" />
+        <activity android:name=".SwitchDefaultActivity" />
+        <activity android:name=".CheckBoxActivity" />
+        <activity android:name=".FrameActivity" />
+        <activity android:name=".RelativeActivity" />
+    </application>
+
+</manifest>
