@@ -16,14 +16,15 @@ import com.example.senior.util.DateUtil;
 import com.example.senior.widget.MonthPicker;
 
 public class CalendarActivity extends AppCompatActivity implements OnClickListener {
-    private static final String TAG = "CalendarAcaaticity";
-    private LinearLayout ll_calendar_main;
-    private LinearLayout ll_month_select;
+    private static final String TAG = "CalendarActivity";
+    private LinearLayout ll_calendar_main;      //主要页面
+    private LinearLayout ll_month_select;       //月份选择器，默认隐藏
     private MonthPicker mp_month;
     private ViewPager vp_calendar;
     private TextView tv_calendar;
     private boolean isShowSelect = false;   //是否显示月份选择器
     private int mSelectedYear = 2000;       //当前选中的月份
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,15 +39,18 @@ public class CalendarActivity extends AppCompatActivity implements OnClickListen
         pts_calendar.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
         vp_calendar =findViewById(R.id.vp_calendar);
         tv_calendar = findViewById(R.id.tv_calendar);
-        showCalendar(DateUtil.getNowYear(), DateUtil.getNowMonth());
+        tv_calendar.setOnClickListener(this);
+        showCalendar(DateUtil.getNowYear(), DateUtil.getNowMonth());//显示目前系统日期
     }
 
+    //显示万年历
     private void showCalendar(int year, int month) {
         if (year != mSelectedYear) {
             tv_calendar.setText(year + "年");
+            //翻页视图适配器
             CalendarPagerAdapter adapter = new CalendarPagerAdapter(getSupportFragmentManager(), year);
             vp_calendar.setAdapter(adapter);
-           mSelectedYear = year;
+            mSelectedYear = year;
         }
         vp_calendar.setCurrentItem(month -1);
     }
@@ -54,9 +58,11 @@ public class CalendarActivity extends AppCompatActivity implements OnClickListen
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.tv_calendar) {
+            //点击显示月份选择页面
             resetPage();
         } else if (v.getId() == R.id.btn_ok) {
-            showCalendar(mp_month.getYear(), mp_month.getMonth() +1);
+            //点击确定刷新页面
+            showCalendar(mp_month.getYear(), mp_month.getMonth() + 1);
             resetPage();
         }
     }

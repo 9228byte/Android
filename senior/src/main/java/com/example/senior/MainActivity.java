@@ -91,6 +91,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         } else if (v.getId() == R.id.btn_calendar) {
             Intent intent = new Intent(this, CalendarActivity.class);
             startActivity(intent);
+        } else if (v.getId() == R.id.btn_vibrator) {
+            Intent intent = new Intent(this, VibratorActivity.class);
+            startActivity(intent);
+        } else if (v.getId() == R.id.btn_schedule) {
+            Intent intent = new Intent(this, ScheduleActivity.class);
+            startActivity(intent);
         }
     }
 }
