@@ -1,7 +1,6 @@
-package com.example.group;
+package com.example.group.fragment;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.group.R;
 import com.example.group.bean.LifeItem;
 
 import java.util.ArrayList;
@@ -28,15 +28,14 @@ public class LifeRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         mItemArray  = itemArray;
     }
 
-    @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(mContext).inflate(R.layout.item_life, viewGroup, false);
         return new ItemHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int i) {
         ItemHolder holder = (ItemHolder) viewHolder;
         holder.iv_pic.setImageResource(mItemArray.get(i).pic);
         holder.tv_title.setText(mItemArray.get(i).title);
@@ -61,7 +60,7 @@ public class LifeRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         public ImageView iv_pic;
         public TextView tv_title;
 
-        public ItemHolder(@NonNull View itemView) {
+        public ItemHolder(View itemView) {
             super(itemView);
             iv_pic = itemView.findViewById(R.id.iv_pic);
             tv_title = itemView.findViewById(R.id.tv_title);

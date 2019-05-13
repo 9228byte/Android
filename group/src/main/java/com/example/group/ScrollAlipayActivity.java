@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.example.group.bean.LifeItem;
+import com.example.group.fragment.LifeRecyclerAdapter;
 import com.example.group.util.Utils;
 
 public class ScrollAlipayActivity extends AppCompatActivity implements OnOffsetChangedListener {
