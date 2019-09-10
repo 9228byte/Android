@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:com.app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/blue_light"
-        app:navigationIcon="@drawable/ic_back">
+        com.app:navigationIcon="@drawable/ic_back">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -23,13 +23,13 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
-            app:tabGravity="center"
-            app:tabIndicatorColor="@color/red"
-            app:tabIndicatorHeight="2dp"
-            app:tabMode="scrollable"
-            app:tabSelectedTextColor="@color/red"
-            app:tabTextColor="@color/grey"
-            app:tabTextAppearance="@style/TabText"/>
+            com.app:tabGravity="center"
+            com.app:tabIndicatorColor="@color/red"
+            com.app:tabIndicatorHeight="2dp"
+            com.app:tabMode="scrollable"
+            com.app:tabSelectedTextColor="@color/red"
+            com.app:tabTextColor="@color/grey"
+            com.app:tabTextAppearance="@style/TabText"/>
     </RelativeLayout>
     </android.support.v7.widget.Toolbar>
 

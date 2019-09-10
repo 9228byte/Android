@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.device">
+    <!-- 拍照 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- 录像/录音 -->
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- SD卡 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 允许修改系统设置 -->
+    <uses-permission android:name="android.permission.MANAGE_WRITE_SETTINGS" /> <!-- 定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 查看网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 开关网络状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 查看手机状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- NFC -->
+    <uses-permission android:name="android.permission.NFC" /> <!-- 仅在支持NFC的设备上运行 -->
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" /> <!-- 红外遥控 -->
+    <uses-permission android:name="android.permission.TRANSMIT_IR" /> <!-- 仅在支持红外的设备上运行 -->
+    <uses-feature
+        android:name="android.hardware.ConsumerIrManager"
+        android:required="true" /> <!-- 蓝牙 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" /> <!-- 仅在支持BLE（即蓝牙4.0）的设备上运行 -->
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" /> <!-- 如果Android6.0 蓝牙搜索不到设备，需要补充下面两个权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
 
     <application
         android:allowBackup="true"
@@ -9,7 +45,64 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.ScanResultActivity"/>
+        <activity android:name=".activity.FindListenActivity" />
+        <activity android:name=".activity.FindShakeActivity" />
+        <activity android:name=".activity.FindScanActivity" />
+        <activity android:name=".activity.FindSmellActivity" />
+        <activity
+            android:name=".activity.WeFindActivity"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".activity.WeContactActivity"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".activity.WeConcernActivity"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".activity.WeChatActivity"
+            android:theme="@style/AppCompatTheme" />
+        <activity android:name=".activity.NavigationActivity" />
+        <activity android:name=".activity.BluetoothActivity" />
+        <activity android:name=".activity.InfraredActivity" />
+        <activity android:name=".activity.NfcActivity">
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+        </activity>
+        <activity android:name=".activity.LocationActivity" />
+        <activity android:name=".activity.LocationSettingActivity" />
+        <activity android:name=".activity.GyroscopeActivity" />
+        <activity android:name=".activity.StepActivity" />
+        <activity android:name=".activity.DirectionActivity" />
+        <activity android:name=".activity.LightActivity" />
+        <activity android:name=".activity.AccelerationActivity" />
+        <activity android:name=".activity.SensorActivity" />
+        <activity android:name=".activity.VideoActivity" />
+        <activity android:name=".activity.AudioActivity" />
+        <activity android:name=".activity.VolumeActivity" />
+        <activity android:name=".activity.SeekbarActivity" />
+        <activity android:name=".activity.TakeShootingActivity" />
+        <activity android:name=".activity.ShootingActivity" />
+        <activity android:name=".activity.TurnTextureActivity" />
+        <activity android:name=".activity.TakePictureActivity" />
+        <activity android:name=".activity.PhotographActivity" />
+        <activity android:name=".activity.CameraInfoActivity" />
+        <activity android:name=".activity.TurnSurfaceActivity" />
+        <activity android:name=".activity.TurnViewActivity" />
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

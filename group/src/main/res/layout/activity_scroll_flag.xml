@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:com.app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cl_main"
     android:layout_width="match_parent"
@@ -17,15 +17,15 @@
             android:id="@+id/ctl_title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleMarginStart="40dp">
+            com.app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            com.app:contentScrim="?attr/colorPrimary"
+            com.app:expandedTitleMarginStart="40dp">
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/tl_title"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin" >
+                com.app:layout_collapseMode="pin" >
 
             <Spinner
                 android:id="@+id/sp_flag"
@@ -41,6 +41,6 @@
         android:id="@+id/rv_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        com.app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 </android.support.design.widget.CoordinatorLayout>

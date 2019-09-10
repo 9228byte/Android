@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:com.app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,11 +16,11 @@
             android:id="@+id/pts_tab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:textColor="@color/red"
-            app:textSize="20sp"
-            app:customBackground="@drawable/xiaomi"
-            app:customOrientation="vertical"
-            app:customGravity="top"/>
+            com.app:textColor="@color/red"
+            com.app:textSize="20sp"
+            com.app:customBackground="@drawable/xiaomi"
+            com.app:customOrientation="vertical"
+            com.app:customGravity="top"/>
     </android.support.v4.view.ViewPager>
 
 </LinearLayout>
