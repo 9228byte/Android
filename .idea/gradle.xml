@@ -8,7 +8,6 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/com.app" />
             <option value="$PROJECT_DIR$/custom" />
             <option value="$PROJECT_DIR$/device" />
             <option value="$PROJECT_DIR$/filedialog" />

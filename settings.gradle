@@ -1,1 +1,1 @@
-include ':com.app', ':junior', ':middle', ':storage', ':senior', ':custom', ':group', ':device', ':network', ':filedialog'
+include ':junior', ':middle', ':storage', ':senior', ':custom', ':group', ':device', ':network', ':filedialog'
