@@ -30,7 +30,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.SocketActivity"></activity>
+        <activity android:name=".activity.ChatMainActivity"></activity>
+        <activity android:name=".activity.QQFindActivity" />
+        <activity android:name=".activity.QQContactActivity" />
+        <activity android:name=".activity.QQConcernActivity" />
+        <activity android:name=".activity.QQChatActivity" />
+        <activity android:name=".activity.QQLoginActivity" />
+        <activity android:name=".activity.FoldListActivity" />
+        <activity android:name=".activity.AppStoreActivity" />
+        <activity android:name=".activity.ApkInfoActivity" />
+        <activity android:name=".activity.SocketActivity" />
         <activity android:name=".activity.NetAddressActivity" />
         <activity android:name=".activity.UploadHttpActivity" />
         <activity android:name=".activity.FileSelectActivity" />

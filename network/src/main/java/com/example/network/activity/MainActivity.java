@@ -101,22 +101,21 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         } else if (v.getId() == R.id.btn_socket) {
             Intent intent = new Intent(this, SocketActivity.class);
             startActivity(intent);
+        } else if (v.getId() == R.id.btn_apk_info) {
+            Intent intent = new Intent(this, ApkInfoActivity.class);
+            startActivity(intent);
+        } else if (v.getId() == R.id.btn_app_store) {
+            if (PermissionUtil.checkPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE, R.id.btn_app_store % 4096)) {
+                PermissionUtil.goActivity(this, AppStoreActivity.class);
+            }
+        } else if (v.getId() == R.id.btn_fold_list) {
+            Intent intent = new Intent(this, FoldListActivity.class);
+            startActivity(intent);
+        } else if (v.getId() == R.id.btn_qqchat) {
+            if (PermissionUtil.checkPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE, R.id.btn_qqchat % 4096)) {
+                PermissionUtil.goActivity(this, QQLoginActivity.class);
+            }
         }
-//        } else if (v.getId() == R.id.btn_apk_info) {
-//            Intent intent = new Intent(this, ApkInfoActivity.class);
-//            startActivity(intent);
-//        } else if (v.getId() == R.id.btn_app_store) {
-//            if (PermissionUtil.checkPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE, R.id.btn_app_store % 4096)) {
-//                PermissionUtil.goActivity(this, AppStoreActivity.class);
-//            }
-//        } else if (v.getId() == R.id.btn_fold_list) {
-//            Intent intent = new Intent(this, FoldListActivity.class);
-//            startActivity(intent);
-//        } else if (v.getId() == R.id.btn_qqchat) {
-//            if (PermissionUtil.checkPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE, R.id.btn_qqchat % 4096)) {
-//                PermissionUtil.goActivity(this, QQLoginActivity.class);
-//            }
-//        }
     }
 
 
